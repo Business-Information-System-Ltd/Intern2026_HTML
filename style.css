@@ -323,7 +323,6 @@ footer {
     text-decoration: underline;
 }
 
-/* ===== Navigation Consistency ===== */
 
 .nav-links {
     display: flex;
@@ -346,7 +345,6 @@ footer {
     color: #7ee2a8;
 }
 
-/* ===== Footer ===== */
 
 .social-links {
     display: flex;
@@ -364,7 +362,6 @@ footer {
     color: #ffffff;
 }
 
-/* ===== Responsive Layout ===== */
 
 @media (max-width: 680px) {
     .portfolio-main {
@@ -387,3 +384,168 @@ footer {
         font-size: 0.95rem;
     }
 }
+
+
+.skills-page,
+.contact-page {
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.skills-page .portfolio-main,
+.contact-page .portfolio-main {
+    flex: 1;
+    width: min(100% - 32px, 1100px);
+    min-height: 0;
+    margin: 12px auto;
+    padding: 20px 28px;
+    overflow: hidden;
+}
+
+
+.skills-page .page-intro,
+.contact-page .page-intro {
+    margin-bottom: 18px;
+}
+
+.skills-page .page-intro h1,
+.contact-page .page-intro h1 {
+    margin-bottom: 6px;
+    font-size: 2rem;
+}
+
+.skills-page .page-intro p,
+.contact-page .page-intro p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.skills-page .content-section,
+.contact-page .content-section {
+    margin-top: 18px;
+}
+
+.skills-page .content-section h2,
+.contact-page .content-section h2 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+
+.skills-page .card-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+.contact-page .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+
+.skills-page .content-card,
+.contact-page .content-card {
+    padding: 14px;
+}
+
+.skills-page .content-card h3,
+.contact-page .content-card h3 {
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.skills-page .content-card p,
+.contact-page .content-card p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.skills-page .card-icon,
+.contact-page .card-icon {
+    margin-bottom: 7px;
+    font-size: 1.4rem;
+}
+
+.skills-page .tag-list {
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.skills-page .tag {
+    padding: 3px 7px;
+    font-size: 11px;
+}
+
+/* Footer stays compact */
+
+.skills-page footer,
+.contact-page footer {
+    flex-shrink: 0;
+    padding: 10px 12px;
+}
+
+.skills-page footer p,
+.contact-page footer p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.skills-page .social-links,
+.contact-page .social-links {
+    gap: 14px;
+}
+
+/* Smaller screens */
+
+@media (max-width: 760px) {
+    .skills-page,
+    .contact-page {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .skills-page .portfolio-main,
+    .contact-page .portfolio-main {
+        width: calc(100% - 24px);
+        margin: 10px auto;
+        padding: 18px;
+        overflow: visible;
+    }
+
+    .skills-page .card-grid,
+    .contact-page .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-height: 650px) and (min-width: 761px) {
+    .skills-page .portfolio-main,
+    .contact-page .portfolio-main {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .skills-page .page-intro,
+    .contact-page .page-intro {
+        margin-bottom: 10px;
+    }
+
+    .skills-page .content-section,
+    .contact-page .content-section {
+        margin-top: 10px;
+    }
+
+    .skills-page .content-card,
+    .contact-page .content-card {
+        padding: 10px;
+    }
+}
+
